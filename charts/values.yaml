@@ -89,5 +89,3 @@ environmentVar:
   CertificatesKeyPath: "/https/private.key"
 
   CertificatesPath: "/https/certificate.crt"
-
-  ASPNETCORE_URLS: "https://+:3737"

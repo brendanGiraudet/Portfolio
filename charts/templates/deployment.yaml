@@ -44,6 +44,9 @@ spec:
 
           - name: ASPNETCORE_URLS
             value: "https://+:{{ .Values.service.port }}"
+            
+          - name: ApplicationVersion
+            value: "{{ .Chart.AppVersion }}"
       
       {{- with .Values.volumes }}
       volumes:
