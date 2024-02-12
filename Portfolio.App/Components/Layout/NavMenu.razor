@@ -1,30 +1,44 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
+﻿@rendermode InteractiveServer
+
+<div class="nav-menu">
+    <div class="nav-menu-burger" @onclick="@(() => Toogle())">
+        <Icon IconSvgEnum="Enums.Icon.Burger" />
+    </div>
+    <div class="nav-menu-title">
+        <div class="puce">BG</div>
+        <span>GIRAUDET Brendan</span>
         <span class="application-version">@_applicationVersion</span>
-        <a class="navbar-brand" href="">Portfolio</a>
     </div>
 </div>
 
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+<div class="nav-menu-items-container @_hiddenClass">
+    <div class="nav-menu-overlay-background" @onclick="@(() => Toogle())"></div>
 
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
+    <div class="nav-menu-overlay">
+        <div class="nav-menu-overlay-header">
+            <div class="puce">BG</div>
+            <div @onclick="@(() => Toogle())">
+                <Icon IconSvgEnum="Enums.Icon.CrossSvg" IconStyle="@Enums.Style.Secondary" />
+            </div>
         </div>
+        <nav class="nav-menu-items">
+            <div class="nav-menu-item">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                    <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+                </NavLink>
+            </div>
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
+            <div class="nav-menu-item">
+                <NavLink class="nav-link" href="counter">
+                    <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
+                </NavLink>
+            </div>
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-    </nav>
+            <div class="nav-menu-item">
+                <NavLink class="nav-link" href="weather">
+                    <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
+                </NavLink>
+            </div>
+        </nav>
+    </div>
 </div>
