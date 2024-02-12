@@ -1,0 +1,67 @@
+.identity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.identity-photo img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: var(--border-radius-round);
+}
+
+.identity-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.identity-info .identity-info-job{
+    font-size: 0.75rem;
+    color: var(--third-color);
+}
+
+.identity-info  .identity-info-email{
+    background-color: var(--active-color);
+    border-radius: var(--border-radius);
+    padding: .75rem;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+}
+
+.description-file{
+    font-size: 0.75rem;
+    padding: 1rem;
+}
+
+.description-text{
+    border: solid 1px var(--border-color);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+}
+
+.description-text-title{
+    text-transform: uppercase;
+    border-bottom: solid 1px var(--border-color);
+    font-size: 1.5rem;
+}
+.description-text-title span{
+    color: var(--active-color);
+}
+
+.description-stack{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.description-stack div img{
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+}

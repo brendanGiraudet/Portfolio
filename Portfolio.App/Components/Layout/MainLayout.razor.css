@@ -2,11 +2,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
-main {
-    flex: 1;
-    background-color: var(--primary-color);
+main{
+    padding: 1rem;
+    background-color: var(--bg-color);
 }
 
 .top-row {
