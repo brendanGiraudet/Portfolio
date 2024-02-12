@@ -1,0 +1,25 @@
+.sub-menu {
+    --activ-color: #f78166;
+}
+
+
+.sub-menu ::deep .nav-menu-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.sub-menu ::deep .nav-menu-items .nav-menu-item {
+    padding: .5rem;
+}
+
+.sub-menu ::deep .nav-menu-items .nav-menu-item .active {
+    border-bottom: solid 3px var(--activ-color);
+    padding: .5rem;
+}
+
+@media screen and (min-width: 400px){
+    .sub-menu {
+        max-width: 25rem;
+    }   
+}
