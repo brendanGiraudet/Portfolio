@@ -31,6 +31,7 @@
     height: 100%;
     width: 100%;
     top:0;
+    left: 0;
     z-index: 100;
 }
 
@@ -50,7 +51,7 @@
 }
 
 .nav-menu-overlay{
-    --overlay-width: 70%;
+    --overlay-width: 15rem;
 }
 
 .nav-menu-overlay{
@@ -84,4 +85,14 @@
 
 .nav-menu-item{
     padding: .75rem;
+}
+
+@media screen and (min-width: 400px){
+ .nav-menu-title{
+    max-width: 20rem;
+ }   
+
+ .nav-menu-overlay{
+    --overlay-width: 20rem; 
+ }
 }
