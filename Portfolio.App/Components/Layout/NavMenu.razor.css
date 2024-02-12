@@ -86,7 +86,13 @@
     flex-direction: column;
 }
 
-.nav-menu-overlay ::deep .nav-menu-item{
+.nav-menu-overlay ::deep .nav-menu-items .nav-menu-item{
+    padding: .75rem;
+    border-radius: var(--border-radius);
+}
+
+.nav-menu-overlay ::deep .nav-menu-items .nav-menu-item:has(.active){
+    background-color: var(--border-color);
     padding: .75rem;
 }
 
