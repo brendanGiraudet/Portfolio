@@ -1,0 +1,77 @@
+﻿.icon {
+    --icon-size-width: 3.5rem;
+    --icon-size-height: 3.5rem;
+
+    --icon-color: var(--third-color);
+    --icon-color-hover: var(--third-color);
+
+    --border-color: var(--third-color);
+    --border-color-hover: var(--secondary-color);
+}
+
+.icon {
+    cursor: pointer;
+    padding: 0.5rem;
+    height: var(--icon-size-height);
+    width: var(--icon-size-width);
+    border: solid 1px var(--border-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    background-color: var(--bg-color);
+}
+
+.icon:hover {
+    --border-color: var(--border-color-hover);
+    --bg-color: var(--bg-color-hover);
+}
+
+.icon ::deep svg {
+    fill: none;
+}
+
+.icon ::deep svg path {
+    fill: var(--icon-color);
+}
+
+.icon:hover ::deep svg path {
+    fill: var(--icon-color-hover);
+}
+
+
+/* SIZE */
+.normal {
+    --icon-size-height: 1.5rem;
+    --icon-size-width: 1.5rem;
+}
+
+/* STYLE */
+.primary {
+    --bg-color: var(--primary-color);
+}
+
+.primary::deep svg path {
+    --icon-color: var(--border-color);
+}
+
+.primary:hover {
+    --border-color-hover: var(--secondary-color);
+    --bg-color-hover: var(--primary-color);
+}
+
+.secondary {
+    --border-color: var(--bg-color);
+}
+
+.secondary::deep svg path {
+    --icon-color: var(--border-color);
+}
+
+.secondary:hover {
+    --bg-color-hover: var(--third-color);
+    --border-color-hover: var(--third-color);
+}
+
+.secondary:hover ::deep svg {
+    --icon-color-hover: var(--secondary-color);
+}
