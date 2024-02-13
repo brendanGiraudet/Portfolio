@@ -1,0 +1,61 @@
+.experiences-title{
+    margin-bottom: 1rem;
+}
+
+.commit{
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 12px 0px;
+    margin-left: 32px;
+    color: var(--border-color);
+}
+
+.commit:before{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    display: block;
+    width: 2px;
+    content: "";
+    background-color: var(--border-color);
+}
+
+.commit-title{
+    font-size:.8rem;
+}
+
+.commit-icon{
+    left:-0.65rem;
+    position: relative;
+    background-color: var(--bg-color);
+}
+
+.commit-icon svg{
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--border-color);
+}
+
+.experience-info{
+    border-radius: var(--border-radius);
+    border: solid 1px var(--border-color);
+}
+
+.experience-info-details{
+    border-bottom: solid 1px var(--border-color);
+    padding: 1rem;
+}
+
+@media screen and (min-width: 600px){
+    .experiences-title{
+        font-size: 2rem;
+    }   
+
+    .commit-title{
+        font-size:1.5rem;
+    }
+}
