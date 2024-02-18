@@ -84,6 +84,7 @@
 .nav-menu-overlay ::deep .nav-menu-items{
     display: flex;
     flex-direction: column;
+    font-size: 1.25rem;
 }
 
 .nav-menu-overlay ::deep .nav-menu-items .nav-menu-item{

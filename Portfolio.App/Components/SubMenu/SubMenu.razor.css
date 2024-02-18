@@ -1,20 +1,15 @@
 .sub-menu ::deep .nav-menu-items {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .sub-menu ::deep .nav-menu-items .nav-menu-item {
     padding: .5rem;
+    font-size: 1.25rem;
 }
 
 .sub-menu ::deep .nav-menu-items .nav-menu-item .active {
     border-bottom: solid 3px var(--active-color);
     padding: .5rem;
-}
-
-@media screen and (min-width: 400px){
-    .sub-menu {
-        max-width: 25rem;
-    }   
 }
