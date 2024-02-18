@@ -1,6 +1,7 @@
 .home-page{
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
 }
 
 .home-page > div{
@@ -72,6 +73,15 @@
     width: 3rem;
     height: 3rem;
     margin: 0.5rem;
+}
+
+.home-page-content > div{
+    margin-bottom: 1rem;
+}
+
+.api-logo{
+    background-color: var(--border-color);
+    border-radius: var(--border-radius-round);
 }
 
 @media screen and (min-width: 600px){

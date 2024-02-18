@@ -25,7 +25,11 @@
 }
 
 .commit-title{
-    font-size:.8rem;
+    font-size:1rem;
+}
+
+.commit-title h3{
+    margin: 0;
 }
 
 .commit-icon{
@@ -50,6 +54,14 @@
     padding: 1rem;
 }
 
+.experience-info-details li{
+    color: var(--border-color);
+    font-weight:500;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    list-style-type: none;
+}
+
 @media screen and (min-width: 600px){
     .experiences-title{
         font-size: 2rem;
@@ -57,5 +69,9 @@
 
     .commit-title{
         font-size:1.5rem;
+    }
+
+    .experience-info-details li{
+        font-size: 1rem;
     }
 }
