@@ -90,7 +90,7 @@
     margin: 0.5rem;
 }
 
-.home-page-content > div{
+.home-page-content > div, .home-page-content ::deep > div{
     margin-bottom: 1rem;
 }
 

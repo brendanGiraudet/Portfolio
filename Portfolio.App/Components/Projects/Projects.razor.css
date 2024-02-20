@@ -1,0 +1,20 @@
+.project{
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    border: solid 1px var(--border-color);
+    margin-bottom: 1rem;
+}
+
+.project > span {
+    border-bottom: solid 1px var(--border-color);
+    padding: 1rem;
+}
+
+.project .project-title {
+    background-color: var(--border-color);
+}
+
+.project-link svg{
+    fill: var(--secondary-color);
+}
