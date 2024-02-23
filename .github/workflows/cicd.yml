@@ -35,7 +35,6 @@ jobs:
     env:
       Repo: /home/runner/work/Portfolio/Portfolio/Portfolio.App
       DockerImageName: bakayarusama/portfolio:${{  github.ref_name }}
-      DockerImageNameArm: bakayarusama/portfolio:${{  github.ref_name }}-arm
 
     steps:
     - name: Checkout source code
@@ -44,14 +43,7 @@ jobs:
     - name: Login to Docker Hub
       run: docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} 
              -p ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-
-    - name: Build Docker image
-      working-directory: /home/runner/work/Portfolio/Portfolio/Portfolio.App
-      run: docker build -t $DockerImageName $Repo
-
-    - name: Publish Docker image
-      run: docker push $DockerImageName
       
-    - name: Build Docker image ARM and push
+    - name: Build Docker image multiple plateform
       working-directory: /home/runner/work/Portfolio/Portfolio/Portfolio.App
-      run: docker buildx build --plateform linux/arm64 -t $DockerImageNameArm --push $Repo
+      run: docker buildx build --plateform linux/amd64,linux/arm64 -t $DockerImageName --push $Repo
