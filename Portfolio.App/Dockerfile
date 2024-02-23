@@ -1,11 +1,13 @@
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+ARG BUILDPLATFORM
 WORKDIR /app
 EXPOSE 8080
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+ARG BUILDPLATFORM
 WORKDIR /src
 COPY . .
-RUN dotnet restore "./Portfolio.App.csproj"
+RUN dotnet restore "./Portfolio.App.csproj" 
 
 RUN dotnet build "./Portfolio.App.csproj" -c Release -o /app/build
 
