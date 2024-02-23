@@ -52,9 +52,6 @@ jobs:
     - name: Publish Docker image
       run: docker push $DockerImageName
       
-    - name: Build Docker image ARM
+    - name: Build Docker image ARM and push
       working-directory: /home/runner/work/Portfolio/Portfolio/Portfolio.App
-      run: docker build --plateform linux/arm64 -t $DockerImageNameArm $Repo
-
-    - name: Publish Docker image ARM
-      run: docker push $DockerImageNameArm
+      run: docker buildx build --plateform linux/arm64 -t $DockerImageNameArm --push $Repo
