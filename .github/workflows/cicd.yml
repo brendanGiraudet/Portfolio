@@ -46,4 +46,4 @@ jobs:
       
     - name: Build Docker image multiple plateform
       working-directory: /home/runner/work/Portfolio/Portfolio/Portfolio.App
-      run: docker buildx create --name mybuilder && docker buildx use mybuilder && docker buildx build --platform linux/amd64,linux/arm64 -t $DockerImageName --push $Repo
+      run: docker buildx create --name mybuilder && docker buildx use mybuilder && docker buildx build --platform linux/amd64,linux/arm/v7 -t $DockerImageName --push $Repo
