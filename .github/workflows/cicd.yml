@@ -32,9 +32,6 @@ jobs:
   Continuous_delivery:
     needs: [Continuous-integration]
     runs-on: ubuntu-latest
-    env:
-      Repo: /home/runner/work/Portfolio/Portfolio/Portfolio.App
-      DockerImageName: bakayarusama/portfolio:${{  github.ref_name }}
 
     steps:
     - name: Checkout source code
@@ -55,7 +52,7 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v5
       with:
-        context: $Repo
+        context: /home/runner/work/Portfolio/Portfolio/Portfolio.App
         platforms: linux/amd64,linux/arm64
         push: true
-        tags: $DockerImageName
+        tags: bakayarusama/portfolio:${{  github.ref_name }}
