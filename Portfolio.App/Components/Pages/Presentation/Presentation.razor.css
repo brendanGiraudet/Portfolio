@@ -26,6 +26,7 @@
 
 .identity-info .identity-info-name{
     font-size: 1.75rem;
+    margin:0;
 }
 
 .identity-info .identity-info-job{
