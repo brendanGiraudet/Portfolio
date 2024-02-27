@@ -26,11 +26,12 @@
 
 .commit-title{
     font-size:1rem;
+    display:flex;
+    flex-direction:column;
 }
-
-.commit-title h3{
-    margin: 0;
-}
+    .commit-title .commit-title-job {
+        font-weight: bold;
+    }
 
 .commit-icon{
     left:-0.65rem;
