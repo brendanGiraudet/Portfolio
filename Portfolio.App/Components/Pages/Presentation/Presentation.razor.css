@@ -13,8 +13,8 @@
 }
 
 .identity-photo img{
-    width: 15rem;
-    height: 15rem;
+    width: 12rem;
+    height: 12rem;
     border-radius: var(--border-radius-round);
 }
 
@@ -25,7 +25,7 @@
 }
 
 .identity-info .identity-info-name{
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin:0;
 }
 
@@ -109,4 +109,10 @@
     .home-page > div{
         padding: 1rem;
     }
+}
+
+.logo{
+    width: 6rem;
+    height: 6rem;
+    border-radius: var(--border-radius-round);
 }

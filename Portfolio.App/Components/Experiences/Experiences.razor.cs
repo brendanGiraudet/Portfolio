@@ -4,6 +4,22 @@ public partial class Experiences
 {
     private IEnumerable<Models.Experience> _experiences = new HashSet<Models.Experience>{
         new Models.Experience{
+            Title="Freelance - Développeur Full Stack .Net(C#) - Groupe Ifop",
+            Date="Mar 2024 À Fév 2025",
+            ExperienceDetails = new HashSet<Models.ExperienceDetail>{
+                new Models.ExperienceDetail{
+                    Title = "Migration d'un outil interne gérant les études",
+                    Details = new HashSet<string> {
+                        "Portail web en Blazor",
+                        "Interface API Rest en .Net 8 agrégeant les informations pour le portail",
+                        "Tests unitaire utilisant xUnit, Moq et Bogus",
+                        "Tests d'intégration via collection Postman",
+                        "Mise en place du CICD via Github"
+                    }
+                }
+            }
+        },
+        new Models.Experience{
             Title="Développeur Full Stack .Net(C#) - Ebp Informatique",
             Date="Mar 2020 À Jan 2024",
             ExperienceDetails = new HashSet<Models.ExperienceDetail>{
